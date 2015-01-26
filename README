@@ -2,11 +2,22 @@
 
 FIXDemoSimple demonstrates how to build messages and applications with QuickFIX/J. A sample requester and a provider can be started as Clojure applications with Leiningen.
 
+## Installation ##
+This project has the following dependencies:
+
+* Java 1.8
+* Clojure 1.6
+* Leiningen (http://leiningen.org/)
+* Ohua (already present)
+
+It is enough to install Leiningen with the 4 little steps listed here: [http://leiningen.org/](http://leiningen.org/). Leiningen will download and install Clojure automatically.
+
 ## How to use the sample applications ##
 
 * configure the FIX targets (TargetCompID) in ./resources/settings-prov and  ./resources/settings-req 
 * The requester and the provider can send *QuoteRequest*, *Quote*, *NewOrderSingle* and *ExecutionReport*.
 * The provider replies a *QuoteRequest* with *Quote*s every 10s for one minute and a *NewOrderSingle* with a *ExecutionReport*.
+
 
 ```
 
