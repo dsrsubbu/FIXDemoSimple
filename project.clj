@@ -11,7 +11,7 @@
                  [org.slf4j/slf4j-jdk14 "1.6.3"]
                  [org.apache.mina/mina-core "1.1.7"]
                  ]
-  
+  ; quickfixj is not in the standard maven repo.
   :repositories [["marketcetera" "http://repo.marketcetera.org/maven/"]]
   
   :main ^:skip-aot fix-demo-simple.core
@@ -20,6 +20,5 @@
   :test-paths ["test" "test/clojure"]
   
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}}
   
   )
