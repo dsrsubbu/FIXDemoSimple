@@ -1,0 +1,8 @@
+# FIXDemoSimple
+
+FIXDemoSimple demonstrates how to build messages and applications with QuickFIX/J. A requester and a provider can be started as Clojure applications with Leiningen.
+
+Leiningen:
+run requester
+run provider initiator
+run provider acceptor

@@ -1,0 +1,6 @@
+/target
+/bin
+/output
+/.lein-repl-history
+/.project
+/.settings

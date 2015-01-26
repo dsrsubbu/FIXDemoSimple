@@ -1,0 +1,32 @@
+[DEFAULT]
+SenderCompID=PROVIDER-CLIENT
+StartTime=00:00:00
+EndTime=00:00:00
+HeartBtInt=60
+ReconnectInterval=5
+TransportDataDictionary=./resources/datadictionaries/FIXT11.xml
+AppDataDictionary=./resources/datadictionaries/FIX50.xml
+
+# logging definition
+[LOGGING]
+FileLogPath=./output/log
+
+# msg storage definition
+[STORAGE]
+PersistMessages=Y
+FileStorePath=./output/store
+
+[SESSION]
+ConnectionType=initiator
+BeginString=FIXT.1.1
+TargetCompID=MINITP-ACCEPTOR
+DefaultApplVerID=FIX.5.0 
+SocketConnectHost=localhost
+SocketConnectPort=9824
+
+[SESSION]
+ConnectionType=acceptor
+TargetCompID=SOME-CLIENT
+BeginString=FIXT.1.1
+DefaultApplVerID=FIX.5.0 
+SocketAcceptPort=9824
